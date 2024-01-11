@@ -6,7 +6,8 @@ function fetch_data() {
         document.getElementById('result').className = "h1 mt-4 alert alert-danger"
     }
 
-    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + String(city_name) + "&appid=7b2dba1ab684a2f434e1dc2adfb75594&units=metric"
+    const apiKey = 'YOUR_API_KEY';
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&appid="+ apiKey +"&units=metric"
     fetch(url)
         .then(Response => Response.json())
         .then(data => {
